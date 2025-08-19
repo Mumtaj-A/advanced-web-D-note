@@ -24,8 +24,9 @@ D --> C
 C --> B
 B --> E[View]
 E --> A
-2) Uses of MVC Framework
+👉 This separation makes development clean, structured, and teamwork-friendly.
 
+<details> <summary>📌 2) Uses of MVC Framework</summary>
 Clean application structure.
 
 Reusability → components can be reused.
@@ -38,8 +39,8 @@ Easier debugging & testing.
 
 Used in modern frameworks: Laravel (PHP), Django (Python), Rails (Ruby), ASP.NET MVC (C#).
 
-3) Advantages & Disadvantages
-
+</details>
+<details> <summary>📌 3) Advantages & Disadvantages</summary>
 ✅ Advantages
 
 Separation of concerns.
@@ -62,8 +63,8 @@ Steeper learning curve for beginners.
 
 Needs well-managed communication between parts.
 
+</details>
 4) Laravel – Introduction
-
 Laravel = A modern, open-source PHP MVC framework created by Taylor Otwell (2011).
 
 ✨ Key Features
@@ -84,8 +85,7 @@ Migrations → manage database schema.
 
 Huge community support.
 
-5) Why Laravel is Better than Other Frameworks
-
+<details> <summary>📌 5) Why Laravel is Better than Other Frameworks</summary>
 Clean, simple syntax.
 
 Blade templates (no messy PHP inside HTML).
@@ -100,7 +100,11 @@ Huge ecosystem of packages (Payments, APIs, etc.).
 
 Better documentation & tutorials.
 
+</details>
 6) Steps to Install & Configure Laravel
+bash
+Copy
+Edit
 # 1. Install Composer
 Download from https://getcomposer.org
 
@@ -115,11 +119,12 @@ php artisan serve
 
 # 5. Open in browser
 http://127.0.0.1:8000
-
-
 🎉 Laravel is ready!
 
 7) Laravel Directory Structure
+mermaid
+Copy
+Edit
 graph TD
 A[Laravel Project Root] --> B[app/ : Models, Controllers, Middleware]
 A --> C[bootstrap/ : Loads Application]
@@ -131,20 +136,22 @@ A --> H[routes/ : web.php, api.php]
 A --> I[storage/ : Logs, Cache, Uploads]
 A --> J[tests/ : Automated Tests]
 A --> K[vendor/ : Composer Packages]
-
 8) Routing in Laravel
-
 Defined in routes/web.php (web) and routes/api.php (API).
 
 Example
+php
+Copy
+Edit
 Route::get('/', function () {
     return view('welcome');
 });
-
-
 👉 Shows welcome.blade.php when user visits /.
 
 9) Route File Functions
+php
+Copy
+Edit
 Route::get('/url', ...);         // GET request
 Route::post('/url', ...);        // POST request (forms)
 Route::put('/url', ...);         // Update data
@@ -152,12 +159,16 @@ Route::delete('/url', ...);      // Delete data
 Route::any('/url', ...);         // Accept any type
 Route::redirect('/from', '/to'); // Redirect
 Route::view('/url', 'viewName'); // Directly show view
-
 10) Controllers in Laravel
 Create Controller
+bash
+Copy
+Edit
 php artisan make:controller StudentController
-
 Example Controller
+php
+Copy
+Edit
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
@@ -175,15 +186,19 @@ class StudentController extends Controller {
         return "Hello, " . $name;
     }
 }
-
 Connect Routes & Controller
+php
+Copy
+Edit
 use App\Http\Controllers\StudentController;
 
 Route::get('/student', [StudentController::class, 'index']);
 Route::get('/student/{id}', [StudentController::class, 'show']);
 Route::post('/submit', [StudentController::class, 'getData']);
-
 11) Routing & Controller Flow (Diagram)
+mermaid
+Copy
+Edit
 sequenceDiagram
 User->>Route: Sends Request (/student/5)
 Route->>Controller: Calls show($id)
@@ -193,9 +208,7 @@ Database-->>Model: Returns Data
 Model-->>Controller: Student Info
 Controller->>View: Pass Data
 View-->>User: Render HTML Response
-
-✅ Quick Exam-Ready Summary
-
+<details> <summary>✅ Quick Exam-Ready Summary</summary>
 MVC = Model (data), View (UI), Controller (logic).
 
 Uses → Clean, reusable, teamwork-friendly.
@@ -211,3 +224,5 @@ Routes → GET, POST, PUT, DELETE, view(), redirect().
 Controllers → Created by Artisan, linked via routes.
 
 Form data → $request->input('name').
+
+</details> ```
