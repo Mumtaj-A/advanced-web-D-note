@@ -11,7 +11,6 @@
 ---
 
 ## 1) Introduction to MVC
-
 **MVC (Model–View–Controller)** is a software design pattern used to keep applications **organized, scalable, and easier to maintain**.
 
 ### MVC Flow
@@ -26,81 +25,75 @@ B --> E[View]
 E --> A
 👉 This separation makes development clean, structured, and teamwork-friendly.
 
-<details> <summary>📌 2) Uses of MVC Framework</summary>
-Clean application structure.
+2) Uses of MVC Framework
+Clean application structure
 
-Reusability → components can be reused.
+Reusability → components can be reused
 
-Scalability → supports large projects.
+Scalability → supports large projects
 
-Teamwork-friendly → designers (views), developers (models), testers (controllers).
+Teamwork-friendly → designers (views), developers (models), testers (controllers)
 
-Easier debugging & testing.
+Easier debugging & testing
 
-Used in modern frameworks: Laravel (PHP), Django (Python), Rails (Ruby), ASP.NET MVC (C#).
+Used in modern frameworks: Laravel (PHP), Django (Python), Rails (Ruby), ASP.NET MVC (C#)
 
-</details>
-<details> <summary>📌 3) Advantages & Disadvantages</summary>
+3) Advantages & Disadvantages
 ✅ Advantages
+Separation of concerns
 
-Separation of concerns.
+Faster development with teams
 
-Faster development with teams.
+Scalable for large systems
 
-Scalable for large systems.
+Code reusability
 
-Code reusability.
-
-Better testing.
+Better testing
 
 ❌ Disadvantages
+More files (model, view, controller for each feature)
 
-More files (model, view, controller for each feature).
+Complex for small apps
 
-Complex for small apps.
+Steeper learning curve for beginners
 
-Steeper learning curve for beginners.
+Needs well-managed communication between parts
 
-Needs well-managed communication between parts.
-
-</details>
 4) Laravel – Introduction
 Laravel = A modern, open-source PHP MVC framework created by Taylor Otwell (2011).
 
-✨ Key Features
+Key Features
+MVC architecture
 
-MVC architecture.
+Blade template engine → cleaner UI code
 
-Blade template engine → cleaner UI code.
+Eloquent ORM → simple DB interaction
 
-Eloquent ORM → simple DB interaction.
+Routing system → clean URL handling
 
-Routing system → clean URL handling.
+Artisan CLI → automates tasks
 
-Artisan CLI → automates tasks.
+Security features → CSRF, hashed passwords
 
-Security features → CSRF, hashed passwords.
+Migrations → manage database schema
 
-Migrations → manage database schema.
+Huge community support
 
-Huge community support.
+5) Why Laravel is Better than Other Frameworks
+Clean, simple syntax
 
-<details> <summary>📌 5) Why Laravel is Better than Other Frameworks</summary>
-Clean, simple syntax.
+Blade templates (no messy PHP inside HTML)
 
-Blade templates (no messy PHP inside HTML).
+Eloquent ORM → DB without writing raw SQL
 
-Eloquent ORM → DB without writing raw SQL.
+Built-in authentication & security
 
-Built-in authentication & security.
+Artisan CLI saves time
 
-Artisan CLI saves time.
+Huge ecosystem of packages (Payments, APIs, etc.)
 
-Huge ecosystem of packages (Payments, APIs, etc.).
+Better documentation & tutorials
 
-Better documentation & tutorials.
-
-</details>
 6) Steps to Install & Configure Laravel
 bash
 Copy
@@ -195,7 +188,7 @@ use App\Http\Controllers\StudentController;
 Route::get('/student', [StudentController::class, 'index']);
 Route::get('/student/{id}', [StudentController::class, 'show']);
 Route::post('/submit', [StudentController::class, 'getData']);
-11) Routing & Controller Flow (Diagram)
+11) Routing & Controller Flow
 mermaid
 Copy
 Edit
@@ -208,21 +201,19 @@ Database-->>Model: Returns Data
 Model-->>Controller: Student Info
 Controller->>View: Pass Data
 View-->>User: Render HTML Response
-<details> <summary>✅ Quick Exam-Ready Summary</summary>
-MVC = Model (data), View (UI), Controller (logic).
+✅ Quick Exam-Ready Summary
+MVC = Model (data), View (UI), Controller (logic)
 
-Uses → Clean, reusable, teamwork-friendly.
+Uses → Clean, reusable, teamwork-friendly
 
-Laravel = PHP MVC framework with Blade, Eloquent, Routing, Artisan.
+Laravel = PHP MVC framework with Blade, Eloquent, Routing, Artisan
 
-Install → Composer → Create project → php artisan serve.
+Install → Composer → Create project → php artisan serve
 
-Structure → app/, routes/, resources/, config/, database/, public/.
+Structure → app/, routes/, resources/, config/, database/, public/
 
-Routes → GET, POST, PUT, DELETE, view(), redirect().
+Routes → GET, POST, PUT, DELETE, view(), redirect()
 
-Controllers → Created by Artisan, linked via routes.
+Controllers → Created by Artisan, linked via routes
 
-Form data → $request->input('name').
-
-</details> ```
+Form data → $request->input('name')
